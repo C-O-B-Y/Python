@@ -25,6 +25,9 @@ def main():
             # print the deci and binary value for the char
             print(str(x) + " = " + str(getDeci(x)) + " : " + calculateBinary(getDeci(x)))
 
+    # loop through the main function to keep using the program
+    main()
+
 def getDeci(x):
     # return the deci value of the input
     return ord(x)

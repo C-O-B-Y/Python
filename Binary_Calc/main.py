@@ -1,8 +1,13 @@
 # Converts Integers and strings to binary format
 
+print("Type : exit() at any time to exit the program...")
+
 def main():
     # Get the value to convert from the user
     data = input("Input value to convert: ")
+
+    if (data == "exit()"):
+        exit()
 
     try:
         # try to convert user input to type of int

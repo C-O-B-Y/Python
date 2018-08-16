@@ -9,11 +9,11 @@ def main():
     data_type = type(data)
 
     if (data_type == int):
-        print(calculateBinary(data))
+        print(str(data) + " = " + calculateBinary(data))
     elif (data_type == str):
         chars = list(data)
         for x in chars:
-            print(calculateBinary(getDeci(x)))
+            print(str(x) + " = " + calculateBinary(getDeci(x)))
 
     main()
 

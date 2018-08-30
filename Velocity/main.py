@@ -31,3 +31,12 @@ def open_img(url):
 if __name__ == "__main__":
     main()
 
+
+"""
+    TODO:
+        1) Better adjust photos to allow underexposed and more overexposed photos to be fixed
+        2) Show side by side of the original to the adjusted version
+        3) Show histogram of image to show what was changed and how
+        4) Better UX
+        5) GUI interface instead of CLI
+"""

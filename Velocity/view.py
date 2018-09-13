@@ -4,6 +4,7 @@ from PIL import ImageTk, Image
 import numpy
 import skimage
 from skimage import exposure
+import cv2
 
 class App(Frame):
 
@@ -58,9 +59,11 @@ class App(Frame):
         return original
 
     def fix_processed_img(self, path):
-        img = Image.open(path)
-        array = numpy.array(img)
-        img = Image.fromarray(array)
+        img = Image.open(path).convert('RGB')
+        open_cv_img = numpy.array(img)
+        equ_img = skimage.exposure.equalize_hist(open_cv_img, nbins=256, mask=None)
+        log_correct = skimage.exposure.adjust_log(equ_img, 1)
+        img = Image.fromarray(log_correct.astype('uint8'), 'RGB')
         return img
 
 
